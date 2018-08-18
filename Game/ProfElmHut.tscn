@@ -7,7 +7,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 10, 41.0676 )
 
-[node name="PEH" type="StaticBody2D" index="0"]
+[node name="PEH" type="StaticBody2D"]
 
 position = Vector2( 115.642, 105.649 )
 input_pickable = false

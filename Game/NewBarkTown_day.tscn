@@ -2,42 +2,42 @@
 
 [ext_resource path="res://OutsideNBT_day.png" type="Texture" id=1]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 16.2652, 16.1102 )
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
 extents = Vector2( 8.52026, 8.05191 )
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=3]
 
 custom_solver_bias = 0.0
 extents = Vector2( 7.22876, 6.87125 )
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=4]
 
 custom_solver_bias = 0.0
 extents = Vector2( 8.20413, 7.35892 )
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=5]
 
 custom_solver_bias = 0.0
 extents = Vector2( 33.5632, 15.6494 )
 
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=6]
 
 custom_solver_bias = 0.0
 extents = Vector2( 32.5878, 33.2057 )
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=7]
 
 custom_solver_bias = 0.0
 extents = Vector2( 33.4594, 65.2086 )
 
-[node name="NBT" type="StaticBody2D" index="0"]
+[node name="NBT" type="StaticBody2D"]
 
 position = Vector2( 193.166, 143.498 )
 input_pickable = false
@@ -52,27 +52,27 @@ _sections_unfolded = [ "Transform" ]
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="." index="0"]
 
 position = Vector2( -111.911, -127.424 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="." index="1"]
 
 position = Vector2( -24.2123, -8.08517 )
-shape = SubResource( 3 )
+shape = SubResource( 2 )
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="." index="2"]
 
 position = Vector2( 22.9207, -56.0826 )
-shape = SubResource( 4 )
+shape = SubResource( 3 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="." index="3"]
 
 position = Vector2( -103.875, -87.7815 )
-shape = SubResource( 5 )
+shape = SubResource( 4 )
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="." index="4"]
 
 position = Vector2( -159.47, 31.2112 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="5"]
 
@@ -88,7 +88,7 @@ polygon = PoolVector2Array( -95.183, -80.5102, -94.6953, -139.519, 191.57, -134.
 
 position = Vector2( 160.933, -17.3932 )
 scale = Vector2( 1, 0.950625 )
-shape = SubResource( 7 )
+shape = SubResource( 6 )
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="." index="8"]
 
@@ -103,7 +103,7 @@ polygon = PoolVector2Array( -162.482, 46.2853, -162.97, 80.4226, -128.833, 80.42
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="10"]
 
 position = Vector2( -161.156, -80.8864 )
-shape = SubResource( 1 )
+shape = SubResource( 7 )
 
 [node name="Sprite" type="Sprite" parent="." index="11"]
 
