@@ -1,4 +1,5 @@
 extends  KinematicBody2D
+signal hit
 
 export (int) var speed  # How fast the player will move (pixels/sec).
 var screensize  # Size of the game window.
@@ -37,5 +38,5 @@ func _process(delta):
 		
 		
 	move_and_slide(motion)
-	position.x = clamp(position.x, 0, screensize.x)
-	position.y = clamp(position.y, 0, screensize.y)
+	#position.x = clamp(position.x, 0, screensize.x)
+	#position.y = clamp(position.y, 0, screensize.y)

@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://ProfElmRoom.png" type="Texture" id=1]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -18,23 +19,45 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="0"]
+[node name="ColorRect" type="ColorRect" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -336.0
+margin_top = -216.0
+margin_right = 327.0
+margin_bottom = 276.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0, 0, 0, 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1"]
 
 build_mode = 0
 polygon = PoolVector2Array( -79.118, 31.9087, -16.7565, 31.9087, -16.7565, 0.727936, -79.7814, 0.727936, -79.7814, -48.3652, -47.9373, -48.3652, -47.9373, -57.6531, -17.4199, -57.6531, -16.7565, -79.5459, 15.7511, -79.5459, 15.7511, -63.6239, 80.1029, -63.6239, 80.1029, 0.727936, 16.4145, 0.727936, 16.4145, 32.5721, 80.1029, 32.5721, 80.1029, 96.9239, -80.4449, 95.5971, -79.7814, 109.529, 109.293, 109.529, 104.649, -107.41, -114.943, -104.756, -113.616, 33.899 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
 
 position = Vector2( -89.5618, 63.6884 )
 shape = SubResource( 1 )
 
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="." index="2"]
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="." index="3"]
 
 build_mode = 0
 polygon = PoolVector2Array( 16.4145, -25.1455, 17.078, -47.7018, 80.1029, -47.7018, 80.1029, -31.7797, 64.1808, -31.7797, 63.5174, -25.1455 )
 
-[node name="Sprite" type="Sprite" parent="." index="3"]
+[node name="Sprite" type="Sprite" parent="." index="4"]
 
 texture = ExtResource( 1 )
+
+[node name="Ethan" parent="." index="5" instance=ExtResource( 2 )]
+
+position = Vector2( -7.4538, 85.896 )
 
 
