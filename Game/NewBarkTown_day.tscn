@@ -13,11 +13,6 @@ extents = Vector2( 16.2652, 16.1102 )
 custom_solver_bias = 0.0
 extents = Vector2( 8.52026, 8.05191 )
 
-[sub_resource type="RectangleShape2D" id=3]
-
-custom_solver_bias = 0.0
-extents = Vector2( 7.22876, 6.87125 )
-
 [sub_resource type="RectangleShape2D" id=4]
 
 custom_solver_bias = 0.0
@@ -43,12 +38,17 @@ extents = Vector2( 33.4594, 65.2086 )
 custom_solver_bias = 0.0
 extents = Vector2( 6.37231, 7.38068 )
 
-[sub_resource type="RectangleShape2D" id=9]
+[sub_resource type="RectangleShape2D" id=10]
 
 custom_solver_bias = 0.0
-extents = Vector2( 7.12962, 7.25906 )
+extents = Vector2( 10, 15.9424 )
 
-[node name="NBT" type="StaticBody2D" index="0"]
+[sub_resource type="RectangleShape2D" id=11]
+
+custom_solver_bias = 0.0
+extents = Vector2( 7.32137, 7.58686 )
+
+[node name="NBT" type="StaticBody2D"]
 
 position = Vector2( 192.431, 155.995 )
 input_pickable = false
@@ -93,53 +93,48 @@ shape = SubResource( 1 )
 position = Vector2( -24.2123, -8.08517 )
 shape = SubResource( 2 )
 
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="." index="4"]
-
-position = Vector2( 22.9207, -56.0826 )
-shape = SubResource( 3 )
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="." index="5"]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="." index="4"]
 
 position = Vector2( -103.875, -87.7815 )
 shape = SubResource( 4 )
 
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="." index="6"]
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="." index="5"]
 
 position = Vector2( -159.47, 31.2112 )
 shape = SubResource( 5 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="7"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="6"]
 
 build_mode = 0
 polygon = PoolVector2Array( -126.882, 46.2853, -112.252, 46.773, -112.252, 31.6551, -95.6707, 31.6551, -95.6707, 46.773, -67.3855, 46.773, -66.4102, 16.0495, -127.37, 16.0495 )
 
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="." index="8"]
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="." index="7"]
 
 build_mode = 0
-polygon = PoolVector2Array( -95.183, -80.5102, -94.6953, -139.519, 191.57, -134.154, 192.058, -47.836, 63.799, -48.8113, 63.799, -64.4169, 48.1934, -64.4169, 48.1934, -48.3236, 22.8343, -49.299, 22.3467, -62.4662, 32.5878, -62.4662, 32.5878, -81.4855, -48.5483, -80.4017, -48.5483, -95.4377, -64.8694, -95.4377, -64.8694, -80.0162 )
+polygon = PoolVector2Array( -95.183, -80.5102, -94.6953, -139.519, 191.57, -134.154, 192.058, -47.836, 64.3172, -48.3793, 64.3172, -64.2883, 47.1844, -64.4631, 47.1844, -48.3793, 15.8908, -48.5541, 15.8908, -63.589, 32.4991, -63.7638, 32.5878, -81.4855, -48.5483, -80.4017, -48.5483, -95.4377, -64.8694, -95.4377, -64.8694, -80.0162 )
 
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="." index="9"]
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="." index="8"]
 
 position = Vector2( 160.933, -17.3932 )
 scale = Vector2( 1, 0.950625 )
 shape = SubResource( 6 )
 
-[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="." index="10"]
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="." index="9"]
 
 build_mode = 0
 polygon = PoolVector2Array( -15.2043, 77.4965, -15.2043, 64.817, 1.37665, 64.817, 0.888977, 47.7483, 63.799, 48.236, 63.3114, 78.9595, 32.6562, 77.9966, 32.4184, 63.9648, 16.2461, 63.2513, 16.2461, 78.2344 )
 
-[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="." index="11"]
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="." index="10"]
 
 build_mode = 0
 polygon = PoolVector2Array( -162.482, 46.2853, -162.97, 80.4226, -128.833, 80.4226, -128.833, 95.5405, -64.4595, 95.5405, -64.4595, 112.121, 112.079, 112.121, 112.079, 15.5618, 191.082, 15.5618, 191.57, 142.845, -192.718, 142.357, -192.23, 46.773 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="12"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="11"]
 
 position = Vector2( -161.156, -80.8864 )
 shape = SubResource( 7 )
 
-[node name="ElmDoor" type="Area2D" parent="." index="13"]
+[node name="ElmDoor" type="Area2D" parent="." index="12"]
 
 position = Vector2( -56.8017, -86.1955 )
 input_pickable = true
@@ -159,9 +154,29 @@ __meta__ = {
 shape = SubResource( 8 )
 _sections_unfolded = [ "Transform" ]
 
+[node name="Route29" type="Area2D" parent="." index="13"]
+
+position = Vector2( -182.511, -0.318497 )
+scale = Vector2( 1, 1.01166 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Route29" index="0"]
+
+shape = SubResource( 10 )
+
 [node name="HomeDoor" type="Area2D" parent="." index="14"]
 
-position = Vector2( 52.5532, -50.8128 )
+position = Vector2( 55.6971, -55.6171 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -175,13 +190,19 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HomeDoor" index="0"]
 
-position = Vector2( 3.3241, -4.43213 )
-shape = SubResource( 9 )
+shape = SubResource( 11 )
+_sections_unfolded = [ "Transform" ]
 
 [connection signal="body_entered" from="ElmDoor" to="." method="_on_ElmDoor_body_entered"]
 
 [connection signal="body_exited" from="ElmDoor" to="." method="_on_ElmDoor_body_exited"]
 
+[connection signal="body_entered" from="Route29" to="." method="_on_Route29_body_entered"]
+
+[connection signal="body_exited" from="Route29" to="." method="_on_Route29_body_exited"]
+
 [connection signal="body_entered" from="HomeDoor" to="." method="_on_HomeDoor_body_entered"]
+
+[connection signal="body_exited" from="HomeDoor" to="." method="_on_HomeDoor_body_exited"]
 
 

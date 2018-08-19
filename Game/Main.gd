@@ -1,7 +1,4 @@
 extends Node
-# class member variables go here, for example:
-# var a = 2
-# var b = "textvar"
 
 onready var NBT = load("res://NewBarkTown_day.tscn")
 var map = null
