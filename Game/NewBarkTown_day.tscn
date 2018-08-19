@@ -2,7 +2,6 @@
 
 [ext_resource path="res://NewBarkTown_day.gd" type="Script" id=1]
 [ext_resource path="res://OutsideNBT_day.png" type="Texture" id=2]
-[ext_resource path="res://Player.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -44,7 +43,12 @@ extents = Vector2( 33.4594, 65.2086 )
 custom_solver_bias = 0.0
 extents = Vector2( 6.37231, 7.38068 )
 
-[node name="NBT" type="StaticBody2D"]
+[sub_resource type="RectangleShape2D" id=9]
+
+custom_solver_bias = 0.0
+extents = Vector2( 7.12962, 7.25906 )
+
+[node name="NBT" type="StaticBody2D" index="0"]
 
 position = Vector2( 192.431, 155.995 )
 input_pickable = false
@@ -55,7 +59,7 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 script = ExtResource( 1 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Collision", "Transform" ]
 
 [node name="ColorRect" type="ColorRect" parent="." index="0"]
 
@@ -145,6 +149,7 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
+_sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }
@@ -152,11 +157,31 @@ __meta__ = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ElmDoor" index="0"]
 
 shape = SubResource( 8 )
+_sections_unfolded = [ "Transform" ]
 
-[node name="Ethan" parent="." index="14" instance=ExtResource( 3 )]
+[node name="HomeDoor" type="Area2D" parent="." index="14"]
 
-position = Vector2( 55.5161, -28.5421 )
+position = Vector2( 52.5532, -50.8128 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HomeDoor" index="0"]
+
+position = Vector2( 3.3241, -4.43213 )
+shape = SubResource( 9 )
 
 [connection signal="body_entered" from="ElmDoor" to="." method="_on_ElmDoor_body_entered"]
+
+[connection signal="body_exited" from="ElmDoor" to="." method="_on_ElmDoor_body_exited"]
+
+[connection signal="body_entered" from="HomeDoor" to="." method="_on_HomeDoor_body_entered"]
 
 

@@ -1,21 +1,21 @@
 extends StaticBody2D
-
-# class member variables go here, for example:
-# var a = 2
-# var b = "textvar"
-
+signal DoorEntered(id)
+var flag = false
+ 
 func _ready():
-	# Called when the node is added to the scene for the first time.
-	# Initialization here
 	pass
 
-#func _process(delta):
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
-#	pass
-
-
 func _on_ElmDoor_body_entered(body):
-	#print (body)
-	get_tree().change_scene("res://ProfElmHut.tscn")
-	pass # replace with function body
+	if flag == true:
+		emit_signal("DoorEntered", "res://ProfElmHut.tscn", 115, 193)
+		queue_free()
+		flag = false
+
+func _on_ElmDoor_body_exited(body):
+	flag = true
+
+
+func _on_HomeDoor_body_entered(body):
+	emit_signal("DoorEntered", "res://Home1st.tscn")
+	queue_free()
+

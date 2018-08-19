@@ -4,21 +4,23 @@ extends Node
 # var b = "textvar"
 
 onready var NBT = load("res://NewBarkTown_day.tscn")
+var map = null
 
 func _ready():
-	# Remove the current level
-	##var level = root.get_node("Level")
-	##root.remove_child(level)
-	##level.call_deferred("free")
-	# Add the next level
-	var next_level = load("res://NewBarkTown_day.tscn")
-	##var next_level = next_level.instance(
-	$Main.add_child(next_level)
-	
-	get_tree().change_scene("res://NewBarkTown_day.tscn")
-	##$Ethan.raise()
-	pass
+	map = NBT.instance()
+	add_child(map)
+	$Ethan.raise()
+	map.connect("DoorEntered", self, "on_DoorEntered")
 
+func on_DoorEntered(next_room, X , Y):
+	var newScreen = load(next_room)
+	map = newScreen.instance()
+	add_child(map)
+	$Ethan.position.x = X
+	$Ethan.position.y = Y
+	$Ethan.raise()
+	map.connect("DoorEntered", self, "on_DoorEntered")
+	
 #func _process(delta):
 #	# Called every frame. Delta is time since last frame.
 #	# Update game logic here.
