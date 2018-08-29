@@ -1,16 +1,16 @@
 [gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
-[ext_resource path="res://Left1.png" type="Texture" id=2]
-[ext_resource path="res://Up1.png" type="Texture" id=3]
-[ext_resource path="res://Down1.png" type="Texture" id=4]
-[ext_resource path="res://Right1.png" type="Texture" id=5]
-[ext_resource path="res://Right2.png" type="Texture" id=6]
-[ext_resource path="res://Left2.png" type="Texture" id=7]
-[ext_resource path="res://Down2.png" type="Texture" id=8]
-[ext_resource path="res://Down3.png" type="Texture" id=9]
-[ext_resource path="res://Up2.png" type="Texture" id=10]
-[ext_resource path="res://Up3.png" type="Texture" id=11]
+[ext_resource path="res://Right2.png" type="Texture" id=2]
+[ext_resource path="res://Right1.png" type="Texture" id=3]
+[ext_resource path="res://Left2.png" type="Texture" id=4]
+[ext_resource path="res://Left1.png" type="Texture" id=5]
+[ext_resource path="res://Up1.png" type="Texture" id=6]
+[ext_resource path="res://Down2.png" type="Texture" id=7]
+[ext_resource path="res://Down3.png" type="Texture" id=8]
+[ext_resource path="res://Up2.png" type="Texture" id=9]
+[ext_resource path="res://Up3.png" type="Texture" id=10]
+[ext_resource path="res://Down1.png" type="Texture" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -20,45 +20,45 @@ extents = Vector2( 7.0675, 8.16339 )
 [sub_resource type="SpriteFrames" id=2]
 
 animations = [ {
-"frames": [ ExtResource( 2 ) ],
-"loop": true,
-"name": "Idle_Left",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 3 ) ],
-"loop": true,
-"name": "Idle_Up",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 4 ) ],
-"loop": true,
-"name": "Idle_Down",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 5 ) ],
-"loop": true,
-"name": "Idle_Right",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 6 ), ExtResource( 5 ) ],
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
 "loop": true,
 "name": "Right",
 "speed": 3.5
 }, {
-"frames": [ ExtResource( 7 ), ExtResource( 2 ) ],
+"frames": [ ExtResource( 4 ), ExtResource( 5 ) ],
 "loop": true,
 "name": "Left",
 "speed": 3.5
 }, {
-"frames": [ ExtResource( 8 ), ExtResource( 9 ) ],
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "Idle_Left",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "Idle_Up",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "Idle_Right",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 8 ) ],
 "loop": true,
 "name": "Down",
 "speed": 3.5
 }, {
-"frames": [ ExtResource( 10 ), ExtResource( 11 ) ],
+"frames": [ ExtResource( 9 ), ExtResource( 10 ) ],
 "loop": true,
 "name": "Up",
 "speed": 3.5
+}, {
+"frames": [ ExtResource( 11 ) ],
+"loop": true,
+"name": "Idle_Down",
+"speed": 5.0
 } ]
 
 [node name="Ethan" type="KinematicBody2D"]
@@ -108,6 +108,6 @@ drag_margin_bottom = 0.2
 editor_draw_screen = true
 editor_draw_limits = false
 editor_draw_drag_margin = false
-_sections_unfolded = [ "Drag Margin", "Transform" ]
+_sections_unfolded = [ "Drag Margin", "Limit", "Transform" ]
 
 

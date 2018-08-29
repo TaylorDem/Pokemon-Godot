@@ -13,37 +13,37 @@ extents = Vector2( 16.2652, 16.1102 )
 custom_solver_bias = 0.0
 extents = Vector2( 8.52026, 8.05191 )
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=3]
 
 custom_solver_bias = 0.0
 extents = Vector2( 8.20413, 7.35892 )
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=4]
 
 custom_solver_bias = 0.0
 extents = Vector2( 33.5632, 15.6494 )
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=5]
 
 custom_solver_bias = 0.0
 extents = Vector2( 32.5878, 33.2057 )
 
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=6]
 
 custom_solver_bias = 0.0
 extents = Vector2( 33.4594, 65.2086 )
 
-[sub_resource type="RectangleShape2D" id=8]
+[sub_resource type="RectangleShape2D" id=7]
 
 custom_solver_bias = 0.0
 extents = Vector2( 6.37231, 7.38068 )
 
-[sub_resource type="RectangleShape2D" id=10]
+[sub_resource type="RectangleShape2D" id=8]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 15.9424 )
 
-[sub_resource type="RectangleShape2D" id=11]
+[sub_resource type="RectangleShape2D" id=9]
 
 custom_solver_bias = 0.0
 extents = Vector2( 7.32137, 7.58686 )
@@ -96,12 +96,12 @@ shape = SubResource( 2 )
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="." index="4"]
 
 position = Vector2( -103.875, -87.7815 )
-shape = SubResource( 4 )
+shape = SubResource( 3 )
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="." index="5"]
 
 position = Vector2( -159.47, 31.2112 )
-shape = SubResource( 5 )
+shape = SubResource( 4 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="6"]
 
@@ -117,7 +117,7 @@ polygon = PoolVector2Array( -95.183, -80.5102, -94.6953, -139.519, 191.57, -134.
 
 position = Vector2( 160.933, -17.3932 )
 scale = Vector2( 1, 0.950625 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="." index="9"]
 
@@ -132,7 +132,7 @@ polygon = PoolVector2Array( -162.482, 46.2853, -162.97, 80.4226, -128.833, 80.42
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="11"]
 
 position = Vector2( -161.156, -80.8864 )
-shape = SubResource( 7 )
+shape = SubResource( 6 )
 
 [node name="ElmDoor" type="Area2D" parent="." index="12"]
 
@@ -151,7 +151,7 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ElmDoor" index="0"]
 
-shape = SubResource( 8 )
+shape = SubResource( 7 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Route29" type="Area2D" parent="." index="13"]
@@ -172,7 +172,7 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Route29" index="0"]
 
-shape = SubResource( 10 )
+shape = SubResource( 8 )
 
 [node name="HomeDoor" type="Area2D" parent="." index="14"]
 
@@ -190,7 +190,7 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HomeDoor" index="0"]
 
-shape = SubResource( 11 )
+shape = SubResource( 9 )
 _sections_unfolded = [ "Transform" ]
 
 [connection signal="body_entered" from="ElmDoor" to="." method="_on_ElmDoor_body_entered"]

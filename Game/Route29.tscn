@@ -8,7 +8,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 10, 16.2747 )
 
-[node name="StaticBody2D" type="StaticBody2D" index="0"]
+[node name="Route29" type="StaticBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 1
@@ -65,8 +65,39 @@ __meta__ = {
 
 shape = SubResource( 1 )
 
+[node name="TallGrass" type="Area2D" parent="." index="4"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TallGrass" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 128.692, 87.6992, 128.746, 57.8328, 225.071, 57.6835, 224.846, -7.4055, 287.084, -7.4055, 287.084, 24.4126, 383.412, 24.4126, 383.412, 55.5314, 286.384, 55.5314, 286.559, 88.0488, 223.098, 87.874, 223.098, 118.818, 159.461, 118.818, 159.287, 87.6992 )
+
+[node name="EncounterTimer" type="Timer" parent="." index="5"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
 [connection signal="body_entered" from="NBT" to="." method="_on_NBT_body_entered"]
 
 [connection signal="body_exited" from="NBT" to="." method="_on_NBT_body_exited"]
+
+[connection signal="body_entered" from="TallGrass" to="." method="_on_TallGrass_body_entered"]
+
+[connection signal="body_exited" from="TallGrass" to="." method="_on_TallGrass_body_exited"]
+
+[connection signal="timeout" from="EncounterTimer" to="." method="_on_EncounterTimer_timeout"]
 
 

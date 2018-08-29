@@ -31,7 +31,3 @@ func _on_Route29_body_entered(body):
 
 func _on_Route29_body_exited(body):
 	flag = true
-
-
-
-#
